@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<property>
+		<name>dfs.nameservices</name>
+		<value>hbase-cluster</value>
+	</property>
+	<property>
+		<name>dfs.ha.namenodes.hbase-cluster</name>
+		<value>nn1,nn2</value>
+	</property>
+	<property>
+		<name>dfs.namenode.rpc-address.hbase-cluster.nn1</name>
+		<value>hbase-cluster-n1.com:8020</value>
+	</property>
+	<property>
+		<name>dfs.namenode.rpc-address.hbase-cluster.nn2</name>
+		<value>hbase-cluster-n2.com:8020</value>
+	</property>
+	<property>
+		<name>dfs.namenode.http-address.hbase-cluster.nn1</name>
+		<value>hbase-cluster-n1.com:50070</value>
+	</property>
+	<property>
+		<name>dfs.namenode.http-address.hbase-cluster.nn2</name>
+		<value>hbase-cluster-n2.com:50070</value>
+	</property>
+	<property>
+		<name>dfs.namenode.shared.edits.dir</name>
+		<value>qjournal://hbase-cluster-n1.com:8485;hbase-cluster-n2.com:8485;hbase-cluster-n3.com:8485/hbase-cluster</value>
+	</property>
+	<property>
+		<name>dfs.client.failover.proxy.provider.hbase-cluster</name>
+		<value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
+	</property>
+	<property>
+		<name>dfs.journalnode.edits.dir</name>
+		<value>/data/journal/node/local/data</value>
+	</property>
+	<property>
+		<name>dfs.datanode.data.dir</name>
+		<value>file:///data/dfs/data</value>
+	</property>
+	<property>
+		<name>hadoop.tmp.dir</name>
+		<value>/data/hadoop/tmp</value>
+	</property>
+</configuration>
