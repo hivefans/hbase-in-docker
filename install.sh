@@ -8,8 +8,8 @@ SSHKEY_PATH="${INSTALL_PATH}/ssh"
 hadoop_package='hadoop-2.9.2.tar.gz'
 hadoop_package_url='https://mirrors.aliyun.com/apache/hadoop/common/hadoop-2.9.2/hadoop-2.9.2.tar.gz'
 
-hbase_package='hbase-2.2.1-bin.tar.gz'
-hbase_package_url='https://mirrors.aliyun.com/apache/hbase/2.2.1/hbase-2.2.1-bin.tar.gz'
+hbase_package='hbase-2.2.6-bin.tar.gz'
+hbase_package_url='https://mirrors.aliyun.com/apache/hbase/2.2.6/hbase-2.2.6-bin.tar.gz'
 
 if [[ ! -f "${ARCHIVES_PATH}/${hadoop_package}" ]]; then
   echo 'download hadoop'
